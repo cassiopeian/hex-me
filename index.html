@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>HEX ME | Hexcode Generator</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <button onclick="changeColor()" >Repaint!</button>
+        <p id="theColor" style="margin: 20px auto; text-align: center; color: white; font-family: monospace; font-size: 18px">hello</p>
+    </body>
+    <script>
+        function getRandomColor(){
+            let letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        function changeColor(){
+            let newColor = getRandomColor();
+            document.body.style.backgroundColor = newColor;
+            document.getElementById('theColor').innerHTML = `This color's hexcode is: ${newColor}`;
+        }
+    </script>
+</html>
