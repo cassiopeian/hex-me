@@ -7,3 +7,10 @@ button {
   	font-size: 16px;
   	padding: 5px;
 }
+p {
+    margin: 20px auto;
+    font-family: monospace;
+    font-size: 18px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
